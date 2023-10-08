@@ -2,7 +2,7 @@
 
 ![Challenge Description](chall_2023-10-08_18-01.png "Challenge Description")
 
-### Running the challenge
+### Running the challenge locally
 
 ```
 docker-compose up -d
