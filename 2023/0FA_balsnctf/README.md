@@ -8,7 +8,7 @@
 docker-compose up -d
 ```
 
-You can now access the challenge at https://localhost:8787/
+You can now access the challenge at https://localhost:8787/index.php
 
 ### Writeup
 
@@ -30,8 +30,17 @@ function fingerprint_check() {
 }
 ```
 
+JA3 is a method of TLS fingerprinting that was inspired by the [research](https://blog.squarelemon.com/tls-fingerprinting/) and works of [Lee Brotherston](https://twitter.com/synackpse) and his TLS Fingerprinting tool: [FingerprinTLS](https://github.com/LeeBrotherston/tls-fingerprinting/tree/master/fingerprintls). 
+
+JA3 gathers the decimal values of the bytes for the following fields in the Client Hello packet; SSL Version, Accepted Ciphers, List of Extensions, Elliptic Curves, and Elliptic Curve Formats. It then concatenates those values together in order, using a "," to delimit each field and a "-" to delimit each value in each field.
+
+The field order is as follows:
+```
+SSLVersion,Cipher,SSLExtension,EllipticCurve,EllipticCurvePointFormat
+```
+
 If you want to know more about JA3 fingerprinting I recommend the following resources:
-- https://github.com/salesforce/ja3
+- https://github.com/salesforce/ja3 (source of the explanation above)
 - https://engineering.salesforce.com/tls-fingerprinting-with-ja3-and-ja3s-247362855967/
 
 To spoof the JA3 fingerprint that the server is expecting I've used the following project:
