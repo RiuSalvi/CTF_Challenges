@@ -81,3 +81,7 @@ HTTP/1.1 500 Internal Server Error
 
 {"statusCode":500,"error":"Internal Server Error","message":"\"BALSN{N0t_R3al1y_aN_u3s_Ca53}\n\" is required!"}
 ```
+
+### Author source code and solution
+
+- https://github.com/cjiso1117/My-CTF-Challenges/tree/main/2023-BalsnCTF/SaaS
