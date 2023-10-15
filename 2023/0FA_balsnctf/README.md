@@ -1,6 +1,6 @@
 ### 0FA - balsnctf 2023 - web
 
-![Challenge Description](chall_2023-10-08_18-01.png "Challenge Description")
+![Challenge Description](2023-10-15_16-36.png "Challenge Description")
 
 ### Running the challenge locally
 
